@@ -312,7 +312,7 @@ public class Myconfig {
 
 地址::  https://github.com/alibaba/nacos/releases/tag/1.4.3
 
-⚠️注意: 最新版2+版本nacos不可以使用  亲测1.4.3可以使用。
+⚠️注意: macM1版  最好下载1.4.3  最新版2+版本nacos不可以使用  亲测1.4.3可以使用。
 
 在application.properties添加以下配置
 

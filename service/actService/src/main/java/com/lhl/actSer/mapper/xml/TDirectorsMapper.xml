@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lhl.actSer.mapper.TDirectorsMapper">
+    <select id="getActsByMid" resultType="com.lhl.actSer.entity.TDirectors">
+        SELECT
+            *
+        FROM
+            t_directors act
+                LEFT JOIN movie_artisarts mact ON mact.a_id = act.d_id
+                LEFT JOIN m_movie ON m_movie.t_id = mact.t_id
+        WHERE
+            m_movie.t_id = #{id}
+    </select>
+</mapper>

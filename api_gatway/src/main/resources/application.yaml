@@ -1,0 +1,40 @@
+# 配置端口
+server:
+  port: 8222
+#  配置服务网名
+spring:
+  application:
+    name: service-gateway
+    # 注册进入nacos
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+      routes:
+        - id: service-mov
+          uri: lb://service-mov
+          predicates:
+            - Path=/service-mov/**
+        - id: service-act
+#          对应微服务名称
+          uri: lb://service-act
+          predicates:
+            - Path=/actSer/**
+        - id: service-cinema
+          uri: lb://service-cinema
+          predicates:
+            - Path=/cinemaService/**
+        - id: service-changci
+          uri: lb://service-changci
+          predicates:
+            - Path=/changciSer/**
+        - id: service-comtab
+          uri: lb://service-comtab
+          predicates:
+            - Path=/comTabSer/**
+
+

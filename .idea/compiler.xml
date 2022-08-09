@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="changciService" />
+        <module name="movieservice" />
+        <module name="service_base" />
+        <module name="comTabService" />
+        <module name="api_gatway" />
+        <module name="actService" />
+        <module name="cinemaService" />
+      </profile>
+    </annotationProcessing>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="actService" options="-parameters" />
+      <module name="api_gatway" options="-parameters" />
+      <module name="changciService" options="-parameters" />
+      <module name="cinemaService" options="-parameters" />
+      <module name="comTabService" options="-parameters" />
+      <module name="comment" options="" />
+      <module name="movieservice" options="-parameters" />
+      <module name="service" options="" />
+      <module name="service_base" options="-parameters" />
+      <module name="tppparent" options="" />
+    </option>
+  </component>
+</project>
